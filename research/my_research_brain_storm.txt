@@ -1,0 +1,62 @@
+thay giao giang
+system thinking
+frontend architecture
+synchronized context in task await
+ robocopy
+ system engineer
+ multi vitamin
+ 
+ 
+ set up iis
+ 
+ - window featrue: mở các tính năng cho net framework chạy trên window
+ iis manager: binding port để kết nối vô máy local
+ 
+hoc them
+- hạn chế của react so với html, css, thuần
+
+
+nghiên cứu life cycle 
+	+ tránh tạo thành funcion call, vẽ sơ đồ: hàm nào gọi hàm nào
+	+ khi nào data được load lên
+	+ khi nào data xuống
+	+ đối tượng đó có những vệ tinh nào xung quanh 
+	
+	truyền thống đọc ghi lên object thông qua smart contract
+sui: thông qua object đó có quyền hay ko
+
+block transaction có thể implement nhiều function từ smart contract
+
+zk login : đăng nhập từ các ứng dụng của web 2
+
+timer, background task, event, 
+
+-- sql
+join sẽ produce 1 cấu trúc key pair theo điều kiện equal đã sinh ra
+
+join into sẽ sinh ra cấu trúc group theo bảng left , từ cấu trúc đó nếu mình query defaulifempty thì sẽ sinh ra các dòng empty
+
+đọc đĩa (disk) , tìm hiểu rõ quy trình đọc ghi ổ đĩa và cách lưu ổ nhớ, do cần kiểm tra có thể khôi phục file đã permenent delete hay ko ?
+
+
+-- sql
+
+begin transaction roll back
+
+sql execution plan
+
+Store Procedure
+
+--
+paralell, database structure, semaphore, 
+
+bản thân database đã handle sẵn các parelell, semarphore, transaction
+
+xử lý tạo các lock trong request để xếp hàng các request , có thể cải tiến với semarphore
+
+
+
+---
+
+
+https://www.google.com/maps/embed/v1/directions?&language=vi&origin=10.792708,106.680096&destination=10.772051,106.667049

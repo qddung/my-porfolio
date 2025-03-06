@@ -1,0 +1,171 @@
+ #region Notification
+
+ //private static async Task<List<NotificationItemModel>> DummyNotificationList(int? trackingDummyId)
+ //{
+ //    if (trackingDummyId == null) return new List<NotificationItemModel>();
+ //    var data = new List<NotificationItemModel>()
+ //    {
+ //        new NotificationItemModel()
+ //        {
+ //            Id = Guid.NewGuid(),
+ //            IsRead = true,
+ //            NotificationTime = DateTime.Now.AddHours(-10),
+ //            Title = "Xe 51C-054.17 bắt đầu đến TTPP lấy hàng",
+ //            DetailId = trackingDummyId.ToString(),
+ //            DetailMessage = new BodyNotificationMessage()
+ //            {
+ //                EstimateTime = CastHelper.CastDurationFromDateTime(DateTime.Now.AddHours(-10)),
+ //                LocationName = "801 - Trung tâm phân phối sóng Thần",
+ //                Message = "Dự kiến tới: 801 - Trung tâm phân phối sóng Thần",
+ //            }
+ //        },
+ //        new NotificationItemModel()
+ //        {
+ //            Id = Guid.NewGuid(),
+ //            IsRead = false,
+ //            NotificationTime = DateTime.Now.AddHours(-9.5),
+ //            NotificationType = ENotificationType.ProgressToLocationSoon,
+ //            Title = "Xe 51C-054.17 sắp tới TTPP",
+ //            DetailId = trackingDummyId.ToString(),
+ //            DetailMessage = new BodyNotificationMessage()
+ //            {
+ //                EstimateTime = CastHelper.CastDurationFromDateTime(DateTime.Now.AddHours(-9.5)),
+ //                LocationName = "801 - Trung tâm phân phối sóng Thần",
+ //                Message = "Dự kiến tới: 801 - Trung tâm phân phối sóng Thần"
+ //            }
+ //        },
+ //        new NotificationItemModel()
+ //        {
+ //            Id = Guid.NewGuid(),
+ //            IsRead = true,
+ //            NotificationTime = DateTime.Now.AddHours(-9),
+ //            NotificationType = ENotificationType.ReachToWarehouse,
+ //            Title = "Xe 51C-054.17 đã đến TTPP",
+ //            DetailId = trackingDummyId.ToString(),
+ //            DetailMessage = new BodyNotificationMessage()
+ //            {
+ //                LocationName = "801 - Trung tâm phân phối sóng Thần"
+ //            }
+ //        },
+ //        new NotificationItemModel()
+ //        {
+ //            Id = Guid.NewGuid(),
+ //            IsRead = true,
+ //            NotificationTime = DateTime.Now.AddHours(-8),
+ //            NotificationType = ENotificationType.StartGoingToDestination,
+ //            Title = "LDD 19-TP201223-23423-23 đã rời TTPP bắt đầu giao hàng",
+ //            DetailId = trackingDummyId.ToString(),
+ //            DetailMessage = new BodyNotificationMessage()
+ //            {
+ //                EstimateTime = CastHelper.CastDurationFromDateTime(DateTime.Now.AddHours(-8)),
+ //                LocationName = "112 - Coop Mart Quy Nhơn",
+ //                Message = "Dự kiến tới: 112 - Coop Mart Quy Nhơn"
+ //            }
+ //        },
+ //        new NotificationItemModel()
+ //        {
+
+ //            Id = Guid.NewGuid(),
+ //            IsRead = true,
+ //            NotificationTime = DateTime.Now.AddHours(-7.5),
+ //            NotificationType = ENotificationType.ProgressToLocationSoon,
+ //            Title = "LDD 19-TP201223-23423-23 sắp đến điểm giao hàng",
+ //            DetailId = trackingDummyId.ToString(),
+ //            DetailMessage = new BodyNotificationMessage()
+ //            {
+ //                EstimateTime = CastHelper.CastDurationFromDateTime(DateTime.Now.AddHours(-7.5)),
+ //                LocationName = "112 - Coop Mart Quy Nhơn",
+ //                Message = "Dự kiến tới: 112 - Coop Mart Quy Nhơn"
+ //            }
+ //        },
+ //        new NotificationItemModel()
+ //        {
+ //            Id = Guid.NewGuid(),
+ //            IsRead = true,
+ //            NotificationTime = DateTime.Now.AddHours(-7),
+ //            NotificationType = ENotificationType.DeliveryAtStore,
+ //            Title = "LDD 19-TP201223-23423-23 đã giao hàng thành công",
+ //            DetailId = trackingDummyId.ToString(),
+ //            DetailMessage = new BodyNotificationMessage()
+ //            {
+ //                LocationName = "112 - Coop Mart Quy Nhơn"
+ //            }
+ //        },
+ //        new NotificationItemModel()
+ //        {
+ //            Id = Guid.NewGuid(),
+ //            IsRead = false,
+ //            NotificationTime = DateTime.Now.AddHours(-6),
+ //            NotificationType = ENotificationType.MeetIncident,
+ //            Title = "LDD 19-TP201223-23423-23 gặp sự cố không thể di chuyển",
+ //            DetailId = trackingDummyId.ToString(),
+ //            DetailMessage = new BodyNotificationMessage()
+ //            {
+ //                Message = "Sự cố: Sự cố 01"
+ //            }
+ //        },
+
+ //        new NotificationItemModel()
+ //        {
+ //            Id = Guid.NewGuid(),
+ //            IsRead = false,
+ //            NotificationTime = DateTime.Now.AddHours(-5),
+ //            NotificationType = ENotificationType.FinishIncident,
+ //            Title = "LDD 19-TP201223-23423-23 kết thúc sự cố tiếp tục di chuyển",
+ //            DetailId = trackingDummyId.ToString(),
+ //            DetailMessage = new BodyNotificationMessage()
+ //            {
+ //                Message = "Xe đã di chuyển bình thường"
+ //            }
+ //        },
+ //        new NotificationItemModel()
+ //        {
+ //            Id = Guid.NewGuid(),
+ //            IsRead = true,
+ //            NotificationTime = DateTime.Now.AddHours(-3),
+ //            NotificationType = ENotificationType.CompleteTracking,
+ //            DetailId = trackingDummyId.ToString(),
+ //            Title = "LDD 19-TP201223-23423-23 đã hoàn thành",
+ //            DetailMessage = new BodyNotificationMessage()
+ //            {
+ //                Message = "Tất cả các điểm đến đã nhận hàng"
+ //            }
+ //        }
+ //    };
+ //    return data;
+ //}
+ //public static List<NotificationItemModel> GetNotifictionSampleData(int? trackingDummyId)
+ //{
+ //    var counter = 1;
+ //    var fullList = Enumerable.Range(0, 3).SelectMany(i =>
+ //    {
+ //        var ls = DummyNotificationList(trackingDummyId).Result;
+ //        int num = ls.Count();
+
+ //        ls.ForEach(notification =>
+ //        {
+ //            notification.Id = Guid.NewGuid();
+ //            int dateAdd = 0 - i;
+ //            int hourAdd = 0 - counter;
+ //            notification.NotificationTime = DateTime.Now.AddDays(dateAdd).AddHours(hourAdd);
+ //            counter++;
+ //        });
+ //        return ls;
+ //    }).OrderByDescending(i => i.NotificationTime).ToList();
+ //    return fullList;
+ //}
+ #endregion
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ --- set trang thai lenh dieu dong
+ModuleSALE/BBGNStatus/A5_11
+
+ModuleSALE/BBGNStatus/A5_21 
+ 
+ 
